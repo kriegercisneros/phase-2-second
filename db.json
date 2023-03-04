@@ -1,0 +1,92 @@
+{
+    "kids": [
+        {
+            "id":1,
+            "name":"Jimmy",
+            "image" : "https://cdn-icons-png.flaticon.com/512/421/421139.png?w=1380&t=st=1677958493~exp=1677959093~hmac=6bad3b079932819fc11c24168769170df7ce96628846265d838ff6f25df55ca4",
+            "dateTrainingBegan": "3 March, 2023",
+            "events":[
+                {
+                    "id": 1,
+                    "date":"3 March, 2023",
+                    "time" : "8:23 am",
+                    "eventType" : "Made It!", 
+                    "pottyType" : 1,
+                    "followUp" : {
+                        "madeIt": [true, false, true], 
+                        "accident": null
+                    }, 
+                    "notes" : "Walked from playground to inside all by himself!"
+                }, 
+                {
+                    "id": 2,
+                    "date":"3 March, 2023",
+                    "time": "12:51pm",
+                    "eventType" : "Accident.", 
+                    "pottyType" : 1,
+                    "followUp" : {
+                        "madeIt": null, 
+                        "accident": [true, true]
+                    }, 
+                    "notes" : "This time, the walk was a little far."
+                }, 
+                {
+                    "id": 3,
+                    "date":"3 March, 2023",
+                    "time":"3:20pm",
+                    "eventType" : "Made it!", 
+                    "pottyType" : 3,
+                    "followUp" : {
+                        "madeIt": [true, true, false], 
+                        "accident": null
+                    }, 
+                    "notes" : "Dry after nap, I think we are getting it!"
+                }
+            ]
+        }, 
+        {
+            "id":2,
+            "name":"Jane",
+            "image" : "https://cdn-icons-png.flaticon.com/512/421/421139.png?w=1380&t=st=1677958493~exp=1677959093~hmac=6bad3b079932819fc11c24168769170df7ce96628846265d838ff6f25df55ca4",
+            "dateTrainingBegan": "5 March, 2023",
+            "events":[
+                {
+                    "id": 1,
+                    "date":"3 March, 2023",
+                    "time" : "7:45 am",
+                    "eventType" : "Accident.", 
+                    "pottyType" : 1,
+                    "followUp" : {
+                        "madeIt": null, 
+                        "accident": [false, false]
+                    }, 
+                    "notes" : "She just kept on playing."
+                }, 
+                {
+                    "id": 2,
+                    "date":"3 March, 2023",
+                    "time": "8:51 am",
+                    "eventType" : "Accident.", 
+                    "pottyType" : 2,
+                    "followUp" : {
+                        "madeIt": null, 
+                        "accident": [true, true]
+                    }, 
+                    "notes" : "Told me after the event.  We can do this!"
+                }, 
+                {
+                    "id": 3,
+                    "date":"3 March, 2023",
+                    "time":"11:51 am",
+                    "eventType" : "Accident.", 
+                    "pottyType" : 1,
+                    "followUp" : {
+                        "madeIt": null,
+                        "accident": [false, true]
+                    }, 
+                    "notes" : "NEVER GIVE UP NEVER SURRENDER!"
+                }
+            ]
+        }
+    ]
+}

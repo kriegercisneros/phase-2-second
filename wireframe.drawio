@@ -1,0 +1,217 @@
+<mxfile host="65bd71144e">
+    <diagram id="YyXictMWJqjmxevJAGW8" name="Page-1">
+        <mxGraphModel dx="821" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="12" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="330" y="30" width="140" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="12" vertex="1">
+                    <mxGeometry width="140" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="HomePage" style="rounded=0;whiteSpace=wrap;html=1;" parent="12" vertex="1">
+                    <mxGeometry width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="state" style="rounded=0;whiteSpace=wrap;html=1;" parent="12" vertex="1">
+                    <mxGeometry y="50" width="50" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="callbacks" style="rounded=0;whiteSpace=wrap;html=1;" parent="12" vertex="1">
+                    <mxGeometry y="110" width="50" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" parent="12" source="10" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="12" vertex="1">
+                    <mxGeometry x="50" y="50" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="12" vertex="1">
+                    <mxGeometry x="50" y="110" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="330" y="240" width="140" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry width="140" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="HomePageCard" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="state" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry y="50" width="50" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="callbacks" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry y="110" width="50" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="50" y="50" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="50" y="110" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="330" y="450" width="140" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="21" vertex="1">
+                    <mxGeometry width="140" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="PottyPal" style="rounded=0;whiteSpace=wrap;html=1;" parent="21" vertex="1">
+                    <mxGeometry width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="state" style="rounded=0;whiteSpace=wrap;html=1;" parent="21" vertex="1">
+                    <mxGeometry y="50" width="50" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="callbacks" style="rounded=0;whiteSpace=wrap;html=1;" parent="21" vertex="1">
+                    <mxGeometry y="110" width="50" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="21" vertex="1">
+                    <mxGeometry x="50" y="50" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="21" vertex="1">
+                    <mxGeometry x="50" y="110" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="330" y="690" width="140" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="28" vertex="1">
+                    <mxGeometry width="140" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="PottyEventCard" style="rounded=0;whiteSpace=wrap;html=1;" parent="28" vertex="1">
+                    <mxGeometry width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="state" style="rounded=0;whiteSpace=wrap;html=1;" parent="28" vertex="1">
+                    <mxGeometry y="50" width="50" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="callbacks" style="rounded=0;whiteSpace=wrap;html=1;" parent="28" vertex="1">
+                    <mxGeometry y="110" width="50" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="28" vertex="1">
+                    <mxGeometry x="50" y="50" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="28" vertex="1">
+                    <mxGeometry x="50" y="110" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="580" y="450" width="140" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="36" vertex="1">
+                    <mxGeometry width="140" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="CreateNewEvent" style="rounded=0;whiteSpace=wrap;html=1;" parent="36" vertex="1">
+                    <mxGeometry width="140" height="67.64705882352942" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="state" style="rounded=0;whiteSpace=wrap;html=1;" parent="36" vertex="1">
+                    <mxGeometry y="67.65" width="50" height="62.35" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="events&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;br&gt;callbacks" style="rounded=0;whiteSpace=wrap;html=1;" parent="36" vertex="1">
+                    <mxGeometry y="130" width="50" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="36" vertex="1">
+                    <mxGeometry x="50" y="67.65" width="90" height="62.35" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="36" vertex="1">
+                    <mxGeometry x="50" y="130" width="90" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="This displays&amp;nbsp; PottyPals Photos and names, and a plus icon that can create a new event for an individual PottyPal&amp;nbsp;&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="220" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="endArrow=classic;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="19" target="23" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="420" y="410" as="sourcePoint"/>
+                        <mxPoint x="660" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.998;exitY=0.13;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="18" target="44" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="470" y="390" as="sourcePoint"/>
+                        <mxPoint x="660" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" value="Displays PottyEventCards and an option to CreateNewEvent; cards can be sorted by date or potty event type" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="440" width="120" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.998;entryY=0.616;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="24" target="47" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="610" y="450" as="sourcePoint"/>
+                        <mxPoint x="660" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" value="Form with easy clickable buttons for an event; upon submission, populates a new PottyEventCard" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="466.25" width="100" height="137.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="41" target="57" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="610" y="560" as="sourcePoint"/>
+                        <mxPoint x="660" y="510" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="59" value="" style="endArrow=classic;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="19" target="38" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="610" y="370" as="sourcePoint"/>
+                        <mxPoint x="660" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="60" value="" style="endArrow=classic;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="27" target="30" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="610" y="630" as="sourcePoint"/>
+                        <mxPoint x="660" y="580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="61" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="15" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="200" as="sourcePoint"/>
+                        <mxPoint x="670" y="470" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="63" value="Individual events with auto generated day and time at creation of event (date.fns). Possibility to be edited?&amp;nbsp;&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="770" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="63" target="32" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="620" y="500" as="sourcePoint"/>
+                        <mxPoint x="670" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="65" value="Not entirely sure if this component is necessary." style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="75" width="130" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;exitX=0.899;exitY=0.797;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="65" target="9" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="620" y="450" as="sourcePoint"/>
+                        <mxPoint x="670" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="67" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="20" y="690" width="140" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="67" vertex="1">
+                    <mxGeometry width="140" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="Sort" style="rounded=0;whiteSpace=wrap;html=1;" parent="67" vertex="1">
+                    <mxGeometry width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="state" style="rounded=0;whiteSpace=wrap;html=1;" parent="67" vertex="1">
+                    <mxGeometry y="50" width="50" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="callbacks" style="rounded=0;whiteSpace=wrap;html=1;" parent="67" vertex="1">
+                    <mxGeometry y="110" width="50" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="67" vertex="1">
+                    <mxGeometry x="50" y="50" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="67" vertex="1">
+                    <mxGeometry x="50" y="110" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="" style="endArrow=classic;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="25" target="69" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="620" y="450" as="sourcePoint"/>
+                        <mxPoint x="670" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="75" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Client-Side-Routes: &lt;br&gt;&lt;font color=&quot;#999900&quot;&gt;1.Home page &lt;br&gt;&lt;/font&gt;(displays all PottyPals)&lt;br&gt;&lt;font color=&quot;#999900&quot;&gt;2.Profile Page with PottyEvents &lt;br&gt;&lt;/font&gt;(unique for PottyPal)&lt;br&gt;&lt;font color=&quot;#999900&quot;&gt;3.New Event Form&lt;/font&gt;&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="670" width="270" height="295" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
