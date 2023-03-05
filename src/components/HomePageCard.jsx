@@ -1,26 +1,11 @@
-import React, {useEffect} from "react";
+import React from "react";
 
 
-function HomePageCard(){
-    useEffect(()=>{
-        fetch('http://localhost:3000/kids')
-        .then(response=>response.json())
-        .then(data=>{
-            displayImages(data)
-        })
-    }, [])
-
-function displayImages(items){
-    items.map((item)=>{
-        console.log(item.image)
-    })
-}
-
+function HomePageCard({displayImages, imageSrc, imageName}){
     return (
         <button>
-            <img src=""></img>
-            <img src=""></img>
-        Hello this is my BUTTON!!!
+            <img src={imageSrc}></img>
+       {imageName}
         </button>
     )
 }
