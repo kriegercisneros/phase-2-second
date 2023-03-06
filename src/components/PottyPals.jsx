@@ -6,8 +6,6 @@ function PottyPals({}){
     const [events, setEvents] = useState([])
     const params =useParams()
     console.log(params.id)
-    // console.log(params)
-    // let id =2
 
     useEffect(()=>{
         fetch(`http://localhost:3000/kids/${params.id}`)

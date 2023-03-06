@@ -22,15 +22,15 @@ function PottyEventCard({event}){
 
                 {event.followUp.madeIt ? (<div id ="madeItFollowUp">
                     <h2>Follow Up</h2>
-                    <h3>Flushed ✔️</h3>                   
-                    <h3>Washed Hands ✔️</h3>                    
-                    <h3>Notified Provider ✔️</h3>
+                    {event.followUp.madeIt[0]? <h3>Flushed ✔️</h3> : <h3>Flushed 🗹</h3>}                   
+                    {event.followUp.madeIt[1]? <h3>Washed Hands ✔️</h3>: <h3>Washed Hands 🗹</h3>}                    
+                    {event.followUp.madeIt[2]? <h3>Notified Provider ✔️</h3> : <h3>Notified Provider 🗹</h3>}
                 </div>): null }
 
                 {event.followUp.accident ? (<div id ="accidentFollowUp">
                     <h2>Follow Up</h2>                   
-                    <h3>Almost Made It ✔️</h3>                 
-                    <h3>Notified Provider ✔️</h3>
+                    {event.followUp.accident[0]? <h3>Almost Made It ✔️</h3> : <h3>Almost Made It 🗹</h3> }                 
+                    {event.followUp.accident[1]? <h3>Notified Provider ✔️</h3> : <h3>Notified Provider 🗹</h3>}
                 </div>) : null}
             
                 <div>
