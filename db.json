@@ -14,7 +14,7 @@
                     "pottyType" : 1,
                     "followUp" : {
                         "madeIt": [true, false, true], 
-                        "accident": null
+                        "accident": []
                     }, 
                     "notes" : "Walked from playground to inside all by himself!"
                 }, 
@@ -25,7 +25,7 @@
                     "eventType" : "Accident.", 
                     "pottyType" : 1,
                     "followUp" : {
-                        "madeIt": null, 
+                        "madeIt": [], 
                         "accident": [true, true]
                     }, 
                     "notes" : "This time, the walk was a little far."
@@ -38,7 +38,7 @@
                     "pottyType" : 3,
                     "followUp" : {
                         "madeIt": [true, true, false], 
-                        "accident": null
+                        "accident": []
                     }, 
                     "notes" : "Dry after nap, I think we are getting it!"
                 }
@@ -85,6 +85,18 @@
                         "accident": [false, true]
                     }, 
                     "notes" : "NEVER GIVE UP NEVER SURRENDER!"
+                }, 
+                {
+                    "id": 4,
+                    "date":"4 March, 2023",
+                    "time":"11:51 am",
+                    "eventType" : "Made it!", 
+                    "pottyType" : 1,
+                    "followUp" : {
+                        "madeIt":[true, true, true],
+                        "accident": null
+                    }, 
+                    "notes" : "Off to a good start :)"
                 }
             ]
         }

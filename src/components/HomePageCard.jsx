@@ -1,11 +1,13 @@
 import React from "react";
+import {useHistory} from "react-router-dom"
 
-
-function HomePageCard({displayImages, imageSrc, imageName}){
+function HomePageCard({data, imageSrc, imageName}){
+    // console.log(data.id)
+    let history = useHistory()
     return (
-        <button>
+        <button onClick={(()=>history.push(`/${data.id}`))}>
             <img src={imageSrc}></img>
-       {imageName}
+       <h1>{imageName}</h1>
         </button>
     )
 }
