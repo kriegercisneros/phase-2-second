@@ -11,124 +11,139 @@
       "name": "Jane",
       "image": "https://cdn-icons-png.flaticon.com/512/421/421140.png?w=1380&t=st=1677958578~exp=1677959178~hmac=d7cb047dcc1ce22e6faef033603d71e3c63464421b2c53110b760f2b61caa557",
       "dateTrainingBegan": "5 March, 2023"
-      }
-    ],
-    
-    "events": [
+    }
+  ],
+  "events": [
     {
-        "id": 1,
-        "date": "3 March, 2023",
-        "kidId": 2,
-        "time": "7:45 am",
-        "eventType": "Accident.",
-        "pottyType": 1,
-        "followUp": {
-            "madeIt": null,
-            "accident": [
-              false,
-              false
-            ]
-        },
-        "notes": "She just kept on playing."
+      "id": 1,
+      "date": "3 March, 2023",
+      "kidId": 2,
+      "time": "7:45 am",
+      "eventType": "Accident.",
+      "pottyType": 1,
+      "followUp": {
+        "madeIt": null,
+        "accident": [
+          false,
+          false
+        ]
+      },
+      "notes": "She just kept on playing."
     },
     {
-        "id": 2,
-        "date": "3 March, 2023",
-        "kidId" : 2,
-        "time": "8:51 am",
-        "eventType": "Accident.",
-        "pottyType": 2,
-        "followUp": {
-            "madeIt": null,
-            "accident": [
-              true,
-              true
-            ]
-          },
-          "notes": "Told me after the event.  We can do this!"
-        },
-        {
-          "id": 3,
-          "date": "3 March, 2023",
-          "kidId" : 2,
-          "time": "11:51 am",
-          "eventType": "Accident.",
-          "pottyType": 1,
-          "followUp": {
-            "madeIt": null,
-            "accident": [
-              false,
-              true
-            ]
-          },
-          "notes": "NEVER GIVE UP NEVER SURRENDER!"
-        },
-        {
-          "id": 4,
-          "date": "4 March, 2023",
-          "kidId" : 2,
-          "time": "11:51 am",
-          "eventType": "Made it!",
-          "pottyType": 1,
-          "followUp": {
-            "madeIt": [
-              true,
-              true,
-              true
-            ],
-            "accident": null
-          },
-          "notes": "Off to a good start :)"
-        },
-        {
-            "id": 5,
-            "date": "3 March, 2023",
-            "kidId" : 1,
-            "time": "8:23 am",
-            "eventType": "Made It!",
-            "pottyType": 1,
-            "followUp": {
-                "madeIt": [
-                  true,
-                  false,
-                  true
-                ],
-                "accident": null
-                },
-            "notes": "Walked from playground to inside all by himself!"
-            },
-            {
-              "id": 6,
-              "date": "3 March, 2023",
-              "kidId" : 1,
-              "time": "12:51pm",
-              "eventType": "Accident.",
-              "pottyType": 1,
-              "followUp": {
-                "madeIt": null,
-                "accident": [
-                  true,
-                  true
-                ]
-              },
-              "notes": "This time, the walk was a little far."
-            },
-            {
-              "id": 7,
-              "date": "3 March, 2023",
-              "kidId" : 1,
-              "time": "3:20pm",
-              "eventType": "Made it!",
-              "pottyType": 3,
-              "followUp": {
-                "madeIt": [
-                  true,
-                  true,
-                  false
-                ],
-                "accident": null
-              },
-              "notes": "Dry after nap, I think we are getting it!"
-            }
-          ]
+      "id": 2,
+      "date": "3 March, 2023",
+      "kidId": 2,
+      "time": "8:51 am",
+      "eventType": "Accident.",
+      "pottyType": 2,
+      "followUp": {
+        "madeIt": null,
+        "accident": [
+          true,
+          true
+        ]
+      },
+      "notes": "Told me after the event.  We can do this!"
+    },
+    {
+      "id": 3,
+      "date": "3 March, 2023",
+      "kidId": 2,
+      "time": "11:51 am",
+      "eventType": "Accident.",
+      "pottyType": 1,
+      "followUp": {
+        "madeIt": null,
+        "accident": [
+          false,
+          true
+        ]
+      },
+      "notes": "NEVER GIVE UP NEVER SURRENDER!"
+    },
+    {
+      "id": 4,
+      "date": "4 March, 2023",
+      "kidId": 2,
+      "time": "11:51 am",
+      "eventType": "Made it!",
+      "pottyType": 1,
+      "followUp": {
+        "madeIt": [
+          true,
+          true,
+          true
+        ],
+        "accident": null
+      },
+      "notes": "Off to a good start :)"
+    },
+    {
+      "id": 5,
+      "date": "3 March, 2023",
+      "kidId": 1,
+      "time": "8:23 am",
+      "eventType": "Made It!",
+      "pottyType": 1,
+      "followUp": {
+        "madeIt": [
+          true,
+          false,
+          true
+        ],
+        "accident": null
+      },
+      "notes": "Walked from playground to inside all by himself!"
+    },
+    {
+      "id": 6,
+      "date": "3 March, 2023",
+      "kidId": 1,
+      "time": "12:51pm",
+      "eventType": "Accident.",
+      "pottyType": 1,
+      "followUp": {
+        "madeIt": null,
+        "accident": [
+          true,
+          true
+        ]
+      },
+      "notes": "This time, the walk was a little far."
+    },
+    {
+      "id": 7,
+      "date": "3 March, 2023",
+      "kidId": 1,
+      "time": "3:20pm",
+      "eventType": "Made it!",
+      "pottyType": 3,
+      "followUp": {
+        "madeIt": [
+          true,
+          true,
+          false
+        ],
+        "accident": null
+      },
+      "notes": "Dry after nap, I think we are getting it!"
+    },
+    {
+      "date": "",
+      "kidId": 1,
+      "time": "",
+      "eventType": "Made It",
+      "pottyType": "# 1",
+      "followUp": {
+        "madeIt": [
+          true,
+          false,
+          false
+        ]
+      },
+      "notes": "testing8",
+      "id": 8
     }
+  ]
+}

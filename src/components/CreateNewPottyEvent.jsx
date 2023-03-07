@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, } from "react"
 import {useParams} from "react-router-dom"
 
 function CreateNewPottyEvent(){
@@ -13,27 +13,37 @@ function CreateNewPottyEvent(){
     const [almostMadeIt, setAlmostMadeIt] = useState(false)
     const [notifiedProviderAccident, setNotifiedProviderAccident] = useState(false)
 
-    const [madeItFollowUp, setMadeItFollowUp]= useState({})
-    const [accidentFollowUp, setAccidentFollowUp] = useState({})
+    // const [madeItFollowUp, setMadeItFollowUp]= useState({})
+    // const [accidentFollowUp, setAccidentFollowUp] = useState({})
 
     const [notes, setNotes]= useState("")
 
     const params = useParams()
-    const object = params
-    console.log(object)
+    
 
     let madeItFollowUpObj = {
         flushed:flushed, 
         washedHands:washedHands,
         notifiedProvider:notifiedProvider
     }
+    console.log(madeItFollowUpObj)
 //do i need to set this in state??
     let accidentFollowUpObj = {
         almostMadeIt : almostMadeIt,
         notifiedProviderAccident : notifiedProviderAccident
     }
 
-    whatHappened === "Made It" ? accidentFollowUpObj = null : madeItFollowUpObj = null
+
+whatHappened === "Made It" ? accidentFollowUpObj = null : madeItFollowUpObj = null; 
+// let destructuredMadeIt={...madeItFollowUpObj};
+// let flush = destructuredMadeIt.flushed;
+// let wash = destructuredMadeIt.washedHands;
+// let notify= destructuredMadeIt.notifiedProvider;
+
+// let destructuredAlmost={...accidentFollowUpObj};
+// let almost = destructuredAlmost.almostMadeIt;
+// let notifiedAccident=destructuredAlmost.notifiedProviderAccident;
+    
 
 function handleRadioClick(e){
    setWhatHappened(e.target.value)
@@ -44,23 +54,24 @@ function handleRadio1Click(e){
 
 function handleFlushed(){
     setFlushed(!flushed)
-    handleChecked()
+    // handleChecked()
 }
 
 function handleWashed(){
     setWashedHands(!washedHands)
-    handleChecked()
+    // handleChecked()
 }
 
 function handleNotified(){
    setNotifiedProvider(!notifiedProvider)
-   handleChecked()
+//    handleChecked()
 }
 
+
 //is this necessary to set this in state? 
-function handleChecked(){
-    setMadeItFollowUp(madeItFollowUpObj)
-}
+// function handleChecked(){
+//     setMadeItFollowUp(madeItFollowUpObj)
+// }
 
 function handleAlmost(){
     setAlmostMadeIt(!almostMadeIt)
@@ -69,44 +80,47 @@ function handleAlmost(){
 function handleNotifiedAccident(){
     setNotifiedProviderAccident(!notifiedProviderAccident)
 }
-
-// const newObjForPatching ={
-//     date:"",
-//     time:"",
-//     eventType: whatHappened,
-//     pottyType: whatCameOut,
-//     followUp:{
-//         madeIt:[madeItFollowUpObj.flushed, madeItFollowUpObj.washedHands, madeItFollowUpObj.notifiedProvider],
-//         accident:[accidentFollowUpObj.almostMadeIt, accidentFollowUpObj.notifiedProviderAccident]
-//     },
-//     notes:notes
-// }
-// console.log(newObjForPatching)
-
-
+let postedObj={};
 function handleSubmit(e){
+    accidentFollowUpObj === null ?(
+        postedObj = {
+            date:"",
+            kidId: parseInt(params.id),
+            time:"",
+            eventType: whatHappened,
+            pottyType: whatCameOut,
+            followUp:{
+                madeIt:[madeItFollowUpObj.flushed, madeItFollowUpObj.washedHands, madeItFollowUpObj.notifiedProvider]
+           // accident:[accidentFollowUpObj.accident, accidentFollowUpObj.notifiedProviderAccident]
+                // madeIt:[flush, wash, notify]
+        },
+            notes:notes
+        }):(
+        postedObj={
+            date:"",
+            kidId: parseInt(params.id),
+            time:"",
+            eventType: whatHappened,
+            pottyType: whatCameOut,
+            followUp:{
+                // madeIt:[madeItFollowUpObj.flushed, madeItFollowUpObj.washedHands, madeItFollowUpObj.notifiedProvider]
+                accident:[accidentFollowUpObj.accident, accidentFollowUpObj.notifiedProviderAccident]
+                // madeIt:[flush, wash, notify]
+        },
+            notes:notes
+        })
     e.preventDefault();
-    // fetch(`http://localhost:3000/events`, 
-    // {
-    //     method:"POST",
-    //     headers:{
-    //         "Content-Type":"application/json",
-    //         "Accept":"application/json"
-    //     },
-    //     body:JSON.stringify({ 
-    //         date:"",
-    //          postId: {params.id}
-    //         time:"",
-    //         eventType: whatHappened,
-    //         pottyType: whatCameOut,
-    //         followUp:{
-    //             madeIt:[madeItFollowUpObj.flushed, madeItFollowUpObj.washedHands, madeItFollowUpObj.notifiedProvider],
-    //             // accident:[accidentFollowUpObj.almostMadeIt, accidentFollowUpObj.notifiedProviderAccident]
-    //         },
-    //         notes:notes})
-    // })
-    // .then(response=>response.json())
-    // .then(data=>console.log(data))
+     fetch('http://localhost:3000/events', 
+     {
+         method:"POST",
+         headers:{
+             "Content-Type":"application/json",
+             "Accept":"application/json"
+         },
+         body:JSON.stringify(postedObj)
+     })
+     .then(response=>response.json())
+     .then(data=>console.log(data))
 }
     return(
         <div>
