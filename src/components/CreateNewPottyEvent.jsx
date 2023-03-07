@@ -86,12 +86,7 @@ function handleNotifiedAccident(){
 
 function handleSubmit(e){
     e.preventDefault();
-    // newobj ={
-    //     id:id
-    //     name: name
-    //     events[...events, {newevent}]
-    // }
-    // fetch(`http://localhost:3000/kids/${params.id}/events/`, 
+    // fetch(`http://localhost:3000/events`, 
     // {
     //     method:"POST",
     //     headers:{
@@ -100,6 +95,7 @@ function handleSubmit(e){
     //     },
     //     body:JSON.stringify({ 
     //         date:"",
+    //          postId: {params.id}
     //         time:"",
     //         eventType: whatHappened,
     //         pottyType: whatCameOut,
