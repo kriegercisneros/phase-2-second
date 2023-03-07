@@ -1,0 +1,3 @@
+{
+    "/kids/*": "/kids/$1?_embed=events"
+  }

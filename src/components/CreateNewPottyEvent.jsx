@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import {useParams} from "react-router-dom"
 
 function CreateNewPottyEvent(){
@@ -86,9 +86,14 @@ function handleNotifiedAccident(){
 
 function handleSubmit(e){
     e.preventDefault();
-    // fetch(`http://localhost:3000/kids/${params.id}`, 
+    // newobj ={
+    //     id:id
+    //     name: name
+    //     events[...events, {newevent}]
+    // }
+    // fetch(`http://localhost:3000/kids/${params.id}/events/`, 
     // {
-    //     method:"PATCH",
+    //     method:"POST",
     //     headers:{
     //         "Content-Type":"application/json",
     //         "Accept":"application/json"
