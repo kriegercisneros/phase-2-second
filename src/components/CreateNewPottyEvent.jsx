@@ -1,5 +1,6 @@
 import React, { useState, } from "react"
 import {useParams} from "react-router-dom"
+import { format } from 'date-fns'
 
 function CreateNewPottyEvent(){
     const [whatHappened, setWhatHappened]= useState("")
@@ -13,9 +14,6 @@ function CreateNewPottyEvent(){
     const [almostMadeIt, setAlmostMadeIt] = useState(false)
     const [notifiedProviderAccident, setNotifiedProviderAccident] = useState(false)
 
-    // const [madeItFollowUp, setMadeItFollowUp]= useState({})
-    // const [accidentFollowUp, setAccidentFollowUp] = useState({})
-
     const [notes, setNotes]= useState("")
 
     const params = useParams()
@@ -27,88 +25,65 @@ function CreateNewPottyEvent(){
         notifiedProvider:notifiedProvider
     }
     console.log(madeItFollowUpObj)
-//do i need to set this in state??
+
     let accidentFollowUpObj = {
         almostMadeIt : almostMadeIt,
         notifiedProviderAccident : notifiedProviderAccident
     }
 
+    whatHappened === "Made It" ? accidentFollowUpObj = null : madeItFollowUpObj = null; 
 
-whatHappened === "Made It" ? accidentFollowUpObj = null : madeItFollowUpObj = null; 
-// let destructuredMadeIt={...madeItFollowUpObj};
-// let flush = destructuredMadeIt.flushed;
-// let wash = destructuredMadeIt.washedHands;
-// let notify= destructuredMadeIt.notifiedProvider;
+    function handleRadioClick(e){
+    setWhatHappened(e.target.value)
+    }
+    function handleRadio1Click(e){
+        setWhatCameOut(e.target.value)
+    }
 
-// let destructuredAlmost={...accidentFollowUpObj};
-// let almost = destructuredAlmost.almostMadeIt;
-// let notifiedAccident=destructuredAlmost.notifiedProviderAccident;
-    
+    function handleFlushed(){
+        setFlushed(!flushed)
+    }
 
-function handleRadioClick(e){
-   setWhatHappened(e.target.value)
-}
-function handleRadio1Click(e){
-    setWhatCameOut(e.target.value)
-}
+    function handleWashed(){
+        setWashedHands(!washedHands)
+    }
 
-function handleFlushed(){
-    setFlushed(!flushed)
-    // handleChecked()
-}
+    function handleNotified(){
+    setNotifiedProvider(!notifiedProvider)
+    }
+    function handleAlmost(){
+        setAlmostMadeIt(!almostMadeIt)
+    }
 
-function handleWashed(){
-    setWashedHands(!washedHands)
-    // handleChecked()
-}
+    function handleNotifiedAccident(){
+        setNotifiedProviderAccident(!notifiedProviderAccident)
+    }
+    let postedObj={};
 
-function handleNotified(){
-   setNotifiedProvider(!notifiedProvider)
-//    handleChecked()
-}
-
-
-//is this necessary to set this in state? 
-// function handleChecked(){
-//     setMadeItFollowUp(madeItFollowUpObj)
-// }
-
-function handleAlmost(){
-    setAlmostMadeIt(!almostMadeIt)
-}
-
-function handleNotifiedAccident(){
-    setNotifiedProviderAccident(!notifiedProviderAccident)
-}
-let postedObj={};
-function handleSubmit(e){
-    accidentFollowUpObj === null ?(
-        postedObj = {
-            date:"",
+    let date = format ( new Date(), 'do MMMM Y h:mm a')
+    function handleSubmit(e){
+        accidentFollowUpObj === null ?(postedObj = {
+            date:date,
             kidId: parseInt(params.id),
-            time:"",
             eventType: whatHappened,
             pottyType: whatCameOut,
             followUp:{
-                madeIt:[madeItFollowUpObj.flushed, madeItFollowUpObj.washedHands, madeItFollowUpObj.notifiedProvider]
-           // accident:[accidentFollowUpObj.accident, accidentFollowUpObj.notifiedProviderAccident]
-                // madeIt:[flush, wash, notify]
+                madeIt:[madeItFollowUpObj.flushed, madeItFollowUpObj.washedHands, madeItFollowUpObj.notifiedProvider],
+                accident: null
         },
             notes:notes
-        }):(
-        postedObj={
+        }):(postedObj={
             date:"",
             kidId: parseInt(params.id),
-            time:"",
             eventType: whatHappened,
             pottyType: whatCameOut,
             followUp:{
-                // madeIt:[madeItFollowUpObj.flushed, madeItFollowUpObj.washedHands, madeItFollowUpObj.notifiedProvider]
+                madeIt: null,
                 accident:[accidentFollowUpObj.accident, accidentFollowUpObj.notifiedProviderAccident]
-                // madeIt:[flush, wash, notify]
         },
             notes:notes
         })
+        
     e.preventDefault();
      fetch('http://localhost:3000/events', 
      {
@@ -142,8 +117,6 @@ function handleSubmit(e){
                     <input type ="radio" id="#12" name="radio1" value="# 1 & 2" onChange={handleRadio1Click}></input>
                     <label htmlFor="##12">#1&2</label>
                 </div>
-{/*i also need to say that the input for whatever is not selected should be submitted as null; maybe put this 
-in the handleSubmit function.  Yes that is what I will do, make the objects null in my submit function */ }
                 {whatHappened === "Made It" ? (
                 <div id ="madeItFollowUp">
                     <h2>Made It Follow Up</h2>
@@ -169,7 +142,5 @@ in the handleSubmit function.  Yes that is what I will do, make the objects null
             </form>
         </div>
     )
-
 }
-
 export default CreateNewPottyEvent

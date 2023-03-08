@@ -11,6 +11,30 @@
       "name": "Jane",
       "image": "https://cdn-icons-png.flaticon.com/512/421/421140.png?w=1380&t=st=1677958578~exp=1677959178~hmac=d7cb047dcc1ce22e6faef033603d71e3c63464421b2c53110b760f2b61caa557",
       "dateTrainingBegan": "5 March, 2023"
+    }, 
+    {
+      "id": 3,
+      "name": "Jannie",
+      "image": "https://cdn-icons-png.flaticon.com/512/421/421140.png?w=1380&t=st=1677958578~exp=1677959178~hmac=d7cb047dcc1ce22e6faef033603d71e3c63464421b2c53110b760f2b61caa557",
+      "dateTrainingBegan": "5 March, 2023"
+    },
+    {
+      "id": 4,
+      "name": "John",
+      "image": "https://cdn-icons-png.flaticon.com/512/421/421139.png?w=1380&t=st=1677958493~exp=1677959093~hmac=6bad3b079932819fc11c24168769170df7ce96628846265d838ff6f25df55ca4",
+      "dateTrainingBegan": "3 March, 2023"
+    },
+    {
+      "id": 5,
+      "name": "Robert",
+      "image": "https://cdn-icons-png.flaticon.com/512/421/421139.png?w=1380&t=st=1677958493~exp=1677959093~hmac=6bad3b079932819fc11c24168769170df7ce96628846265d838ff6f25df55ca4",
+      "dateTrainingBegan": "3 March, 2023"
+    },
+    {
+      "id": 6,
+      "name": "Valaria",
+      "image": "https://cdn-icons-png.flaticon.com/512/421/421140.png?w=1380&t=st=1677958578~exp=1677959178~hmac=d7cb047dcc1ce22e6faef033603d71e3c63464421b2c53110b760f2b61caa557",
+      "dateTrainingBegan": "5 March, 2023"
     }
   ],
   "events": [
@@ -18,9 +42,8 @@
       "id": 1,
       "date": "3 March, 2023",
       "kidId": 2,
-      "time": "7:45 am",
       "eventType": "Accident.",
-      "pottyType": 1,
+      "pottyType": "#1",
       "followUp": {
         "madeIt": null,
         "accident": [
@@ -34,9 +57,8 @@
       "id": 2,
       "date": "3 March, 2023",
       "kidId": 2,
-      "time": "8:51 am",
       "eventType": "Accident.",
-      "pottyType": 2,
+      "pottyType": "#2",
       "followUp": {
         "madeIt": null,
         "accident": [
@@ -50,9 +72,8 @@
       "id": 3,
       "date": "3 March, 2023",
       "kidId": 2,
-      "time": "11:51 am",
       "eventType": "Accident.",
-      "pottyType": 1,
+      "pottyType": "#1",
       "followUp": {
         "madeIt": null,
         "accident": [
@@ -66,16 +87,14 @@
       "id": 4,
       "date": "4 March, 2023",
       "kidId": 2,
-      "time": "11:51 am",
       "eventType": "Made it!",
-      "pottyType": 1,
+      "pottyType": "#1",
       "followUp": {
         "madeIt": [
           true,
           true,
           true
-        ],
-        "accident": null
+        ]
       },
       "notes": "Off to a good start :)"
     },
@@ -83,16 +102,14 @@
       "id": 5,
       "date": "3 March, 2023",
       "kidId": 1,
-      "time": "8:23 am",
       "eventType": "Made It!",
-      "pottyType": 1,
+      "pottyType": "#1",
       "followUp": {
         "madeIt": [
           true,
           false,
           true
-        ],
-        "accident": null
+        ]
       },
       "notes": "Walked from playground to inside all by himself!"
     },
@@ -100,11 +117,9 @@
       "id": 6,
       "date": "3 March, 2023",
       "kidId": 1,
-      "time": "12:51pm",
       "eventType": "Accident.",
-      "pottyType": 1,
+      "pottyType": "#1",
       "followUp": {
-        "madeIt": null,
         "accident": [
           true,
           true
@@ -116,33 +131,30 @@
       "id": 7,
       "date": "3 March, 2023",
       "kidId": 1,
-      "time": "3:20pm",
       "eventType": "Made it!",
-      "pottyType": 3,
+      "pottyType": "#3",
       "followUp": {
         "madeIt": [
           true,
           true,
           false
-        ],
-        "accident": null
+        ]
       },
       "notes": "Dry after nap, I think we are getting it!"
     },
     {
-      "date": "",
+      "date": "7th March 2023 4:32 PM",
       "kidId": 1,
-      "time": "",
       "eventType": "Made It",
-      "pottyType": "# 1",
+      "pottyType": "# 2",
       "followUp": {
         "madeIt": [
-          true,
           false,
-          false
+          true,
+          true
         ]
       },
-      "notes": "testing8",
+      "notes": "You got this girl!",
       "id": 8
     }
   ]

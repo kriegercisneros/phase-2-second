@@ -4,9 +4,11 @@ import HomePage from "./HomePage"
 import PottyPals from "./PottyPals"
 import CreateNewPottyEvent from './CreateNewPottyEvent'
 import { Route, Switch } from "react-router-dom"
+import backImage from '../assets/images/backImage.jpg'
 
 function App() {
     return(
+        <div style={{backgroundImage:`url(${backImage})`, 'background-size':'cover', width:'100vw', height:'100vh'}}>
         <Switch>
             <Route exact path="/home">
                 <HomePage />
@@ -18,6 +20,7 @@ function App() {
                 <PottyPals />
             </Route>
         </Switch>
+        </div>
     )
   }
   export default App  

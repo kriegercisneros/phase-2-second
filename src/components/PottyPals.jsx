@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import PottyEventCard from "./PottyEventCard"
+// import CardGroup from "react-bootstrap/CardGroup"
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row';
 
 function PottyPals({}){
     const [events, setEvents] = useState([])
     const params =useParams()
-    console.log(params.id)
 
     useEffect(()=>{
         fetch(`http://localhost:3000/kids/${params.id}`)
@@ -13,25 +15,13 @@ function PottyPals({}){
         .then(data=>setEvents(data.events))
     }, [params])
     return (
-        /* fetches events based on current params of url; now i need to redirect to this page
-        based on click in HomePageCard */
-        <div>
+        <Row xs={1} md={2} lg={4} className="g-4">
             {events.map((event)=>{
-                return <PottyEventCard 
-                    event={event}
-                />
-                    // id= "1"
-                    // date="3 March, 2023"
-                    // time = "8:23 am"
-                    // eventType = "Made It!" 
-                    // pottyType= "1"
-                    // followUp = {
-                    //     madeIt="[true, false, true]" 
-                    //     accident="null"
-                    // }
-                    // notes="Walked from playground to inside all by himself!"
+                return <Col>
+                    <PottyEventCard event={event}/>
+                </Col>
             })}
-        </div>
+        </Row>
     )
 }
 

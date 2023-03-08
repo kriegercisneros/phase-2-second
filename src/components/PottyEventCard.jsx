@@ -1,44 +1,54 @@
 import React from "react"
+import Card from 'react-bootstrap/Card'
+import { IconContext } from 'react-icons/'
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
+import { faToilet } from "@fortawesome/free-solid-svg-icons";
+
+
 
 function PottyEventCard({event}){
-    console.log(event.followUp.accident)
+    console.log(event)
     return(
-        <div>
-            {/* this is a conditional statement to return one image if true, 
-            the other if false--RENDER STATE TO DETERMINE TRUE/FALSE*/}
-            {/* /*included here will be a series of if else statements showing 
-            up null if the state for  */ }
 
-                <div>
-                    <h2>What Happened?</h2>
-                    <h3>{event.eventType}
-                        {/* <img src="https://as1.ftcdn.net/v2/jpg/04/01/31/82/1000_F_401318285_8t5nMxBTJ0Y9By3VHPnTKghO7V9AyM7x.jpg"></img> */}
-                    </h3>
-                </div>
-                <div>
-                    <h2>What Came Out?</h2>
-                    <h3>{event.pottyType}</h3>
-                </div>
+<div >
+<FontAwesomeIcon icon={faUserSecret}/>
 
-                {event.followUp.madeIt ? (<div id ="madeItFollowUp">
-                    <h2>Follow Up</h2>
-                    {event.followUp.madeIt[0]? <h3>Flushed ✔️</h3> : <h3>Flushed 🗹</h3>}                   
-                    {event.followUp.madeIt[1]? <h3>Washed Hands ✔️</h3>: <h3>Washed Hands 🗹</h3>}                    
-                    {event.followUp.madeIt[2]? <h3>Notified Provider ✔️</h3> : <h3>Notified Provider 🗹</h3>}
-                </div>): null }
 
-                {event.followUp.accident ? (<div id ="accidentFollowUp">
-                    <h2>Follow Up</h2>                   
-                    {event.followUp.accident[0]? <h3>Almost Made It ✔️</h3> : <h3>Almost Made It 🗹</h3> }                 
-                    {event.followUp.accident[1]? <h3>Notified Provider ✔️</h3> : <h3>Notified Provider 🗹</h3>}
-                </div>) : null}
-            
-                <div>
-                    <h2>Notes:</h2>
-                    <p>{event.notes}</p>
-                </div> <br></br><br></br>
+        <Card border="warning">
+            <Card.Header>{event.date}</Card.Header>         
+                {event.followUp.madeIt ? (<Card.Img style={{width:'17rem'}}variant="top" src="https://as1.ftcdn.net/v2/jpg/04/01/31/82/1000_F_401318285_8t5nMxBTJ0Y9By3VHPnTKghO7V9AyM7x.jpg"/>):
+                (<Card.Img style={{width:'13rem'}}variant="top" src="https://img.myloview.com/posters/sad-cute-little-kid-cry-and-wear-jacket-in-winter-season-child-scream-crying-wearing-warm-clothes-400-232608021.jpg"/>)}
+                    <Card.Body>
+                        <div style={{'text-align':'center'}}>
+                            <Card.Title>{event.eventType}</Card.Title>
+                        </div>
+                <div>      
+                    {event.followUp.madeIt ? (<div id ="madeItFollowUp">
+                        <Card.Title>Follow Up</Card.Title>
+                        {event.followUp.madeIt[0]? <Card.Subtitle><i class="fa-regular fa-square-check"></i> Flushed </Card.Subtitle> : <Card.Subtitle><i class="fa-solid fa-circle-xmark"></i> Flushed </Card.Subtitle>}                   
+                        {event.followUp.madeIt[1]? <Card.Subtitle><i class="fa-regular fa-square-check"></i> Washed Hands </Card.Subtitle>: <Card.Subtitle><i class="fa-solid fa-circle-xmark"></i> Washed Hands </Card.Subtitle>}                    
+                        {event.followUp.madeIt[2]? <Card.Subtitle><i class="fa-regular fa-square-check"></i> Notified Provider </Card.Subtitle> : <Card.Subtitle><i class="fa-solid fa-circle-xmark"></i> Notified Provider </Card.Subtitle>}
+                    </div>): null }
+                    {event.followUp.accident ? (<div id ="accidentFollowUp">
+                        <Card.Title>Follow Up</Card.Title>                   
+                        {event.followUp.accident[0]? <Card.Subtitle><i class="fa-regular fa-square-check"></i> Almost Made It</Card.Subtitle> : <Card.Subtitle><i class="fa-solid fa-circle-xmark"></i> Almost Made It </Card.Subtitle> }                 
+                        {event.followUp.accident[1]? <Card.Subtitle><i class="fa-regular fa-square-check"></i> Notified Provider </Card.Subtitle> : <Card.Subtitle><i class="fa-solid fa-circle-xmark"> Notified Provider </i></Card.Subtitle>}
+                    </div>) : null}<br></br>
+                    <div style={{float:'right'}}>
+                    {event.pottyType==='#1' ? (<i className="fa-solid fa-toilet fa-5x" style={{color:'#FFEB33'}}></i>): (<i className="fa-solid fa-toilet fa-5x" style={{color:'#4F351C'}}></i>)}
+                        {/* <Card.Subtitle>{event.pottyType}</Card.Subtitle> */}
+                    </div>
+                </div>  
+                    </Card.Body>
+                <Card.Footer>
+                    <Card.Text className="text-muted">Notes:</Card.Text>
+                    <small>{event.notes}</small>
+                </Card.Footer> 
+        </Card>
         </div>
-    )
+    );
 }
 
 export default PottyEventCard
