@@ -1,25 +1,51 @@
 import React from "react"
 import Card from 'react-bootstrap/Card'
-import { IconContext } from 'react-icons/'
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
-import { faToilet } from "@fortawesome/free-solid-svg-icons";
-
-
+import Accordion from 'react-bootstrap/Accordion';
 
 function PottyEventCard({event}){
-    console.log(event)
     return(
+    <div>
 
-<div >
-<FontAwesomeIcon icon={faUserSecret}/>
-
-
-        <Card border="warning">
+<Accordion defaultActiveKey={['0']} alwaysOpen style={{width:'25rem'}}>
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>{event.date}</Accordion.Header>
+        <Accordion.Body style={{float:'center'}}>
+        <Card border="warning">      
+                {event.followUp.madeIt ? (<Card.Img style={{width:'22rem'}}variant="top" src="https://img.freepik.com/premium-vector/colorful-fireworks-festival-sky-light-holiday-party-sparks_543062-2129.jpg"/>):
+                (<Card.Img style={{width:'21rem'}} variant="top" src="https://static.vecteezy.com/system/resources/previews/016/627/402/non_2x/next-time-buttons-sign-label-speech-bubble-next-time-vector.jpg"/>)}
+            <Card.Body>
+                <div style={{'text-align':'center'}}>
+                    <Card.Title style={{textAlign:'center'}}>{event.eventType}</Card.Title><br/>
+                </div>
+                <div style={{display:'flex'}}>      
+                    {event.followUp.madeIt ? (<div id ="madeItFollowUp">
+                        <Card.Subtitle>Follow Up</Card.Subtitle><br/>
+                        {event.followUp.madeIt[0]? <Card.Text><i class="fa-regular fa-square-check"></i> Flushed </Card.Text> : <Card.Text><i class="fa-solid fa-circle-xmark"></i> Flushed </Card.Text>}                   
+                        {event.followUp.madeIt[1]? <Card.Text><i class="fa-regular fa-square-check"></i> Washed Hands </Card.Text>: <Card.Text><i class="fa-solid fa-circle-xmark"></i> Washed Hands </Card.Text>}                    
+                        {event.followUp.madeIt[2]? <Card.Text><i class="fa-regular fa-square-check"></i> Notified Provider </Card.Text> : <Card.Text><i class="fa-solid fa-circle-xmark"></i> Notified Provider </Card.Text>}
+                    </div>): null }
+                    {event.followUp.accident ? (<div id ="accidentFollowUp">
+                        <Card.Subtitle>Follow Up</Card.Subtitle><br/>                   
+                        {event.followUp.accident[0]? <Card.Text><i class="fa-regular fa-square-check"></i> Almost Made It</Card.Text> : <Card.Text><i class="fa-solid fa-circle-xmark"></i> Almost Made It </Card.Text> }                 
+                        {event.followUp.accident[1]? <Card.Text><i class="fa-regular fa-square-check"></i> Notified Provider </Card.Text> : <Card.Text><i class="fa-solid fa-circle-xmark"></i> Notified Provider </Card.Text>}
+                    </div>) : null}<br/>
+                    <div style={{float:'right', paddingLeft:'5rem'}}>
+                    {event.pottyType==='#1' ? (<i className="fa-solid fa-toilet fa-5x" style={{color:'#FFEB33'}}></i>): (<i className="fa-solid fa-toilet fa-5x" style={{color:'#4F351C'}}></i>)}
+                    </div>
+                </div>  
+                    </Card.Body>
+                <Card.Footer>
+                    <Card.Text className="text-muted">Notes:</Card.Text>
+                    <Card.Text>{event.notes}</Card.Text>
+                </Card.Footer> 
+        </Card>
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+        {/* <Card border="warning">
             <Card.Header>{event.date}</Card.Header>         
-                {event.followUp.madeIt ? (<Card.Img style={{width:'17rem'}}variant="top" src="https://as1.ftcdn.net/v2/jpg/04/01/31/82/1000_F_401318285_8t5nMxBTJ0Y9By3VHPnTKghO7V9AyM7x.jpg"/>):
-                (<Card.Img style={{width:'13rem'}}variant="top" src="https://img.myloview.com/posters/sad-cute-little-kid-cry-and-wear-jacket-in-winter-season-child-scream-crying-wearing-warm-clothes-400-232608021.jpg"/>)}
+                {event.followUp.madeIt ? (<Card.Img style={{width:'25rem'}}variant="top" src="https://img.freepik.com/premium-vector/colorful-fireworks-festival-sky-light-holiday-party-sparks_543062-2129.jpg"/>):
+                (<Card.Img style={{width:'23rem'}}variant="top" src="https://static.vecteezy.com/system/resources/previews/016/627/402/non_2x/next-time-buttons-sign-label-speech-bubble-next-time-vector.jpg"/>)}
                     <Card.Body>
                         <div style={{'text-align':'center'}}>
                             <Card.Title>{event.eventType}</Card.Title>
@@ -34,11 +60,10 @@ function PottyEventCard({event}){
                     {event.followUp.accident ? (<div id ="accidentFollowUp">
                         <Card.Title>Follow Up</Card.Title>                   
                         {event.followUp.accident[0]? <Card.Subtitle><i class="fa-regular fa-square-check"></i> Almost Made It</Card.Subtitle> : <Card.Subtitle><i class="fa-solid fa-circle-xmark"></i> Almost Made It </Card.Subtitle> }                 
-                        {event.followUp.accident[1]? <Card.Subtitle><i class="fa-regular fa-square-check"></i> Notified Provider </Card.Subtitle> : <Card.Subtitle><i class="fa-solid fa-circle-xmark"> Notified Provider </i></Card.Subtitle>}
+                        {event.followUp.accident[1]? <Card.Subtitle><i class="fa-regular fa-square-check"></i> Notified Provider </Card.Subtitle> : <Card.Subtitle><i class="fa-solid fa-circle-xmark"></i> Notified Provider </Card.Subtitle>}
                     </div>) : null}<br></br>
                     <div style={{float:'right'}}>
                     {event.pottyType==='#1' ? (<i className="fa-solid fa-toilet fa-5x" style={{color:'#FFEB33'}}></i>): (<i className="fa-solid fa-toilet fa-5x" style={{color:'#4F351C'}}></i>)}
-                        {/* <Card.Subtitle>{event.pottyType}</Card.Subtitle> */}
                     </div>
                 </div>  
                     </Card.Body>
@@ -46,7 +71,7 @@ function PottyEventCard({event}){
                     <Card.Text className="text-muted">Notes:</Card.Text>
                     <small>{event.notes}</small>
                 </Card.Footer> 
-        </Card>
+        </Card> */}
         </div>
     );
 }

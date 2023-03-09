@@ -1,11 +1,22 @@
 import React, { useState, } from "react"
 import {useParams} from "react-router-dom"
 import { format } from 'date-fns'
+// import Card from 'react-bootstrap/Card';
+// import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 function CreateNewPottyEvent(){
     const [whatHappened, setWhatHappened]= useState("")
 
     const [whatCameOut, setWhatCameOut]= useState("")
+
+    const[madeIt, setMadeIt]=useState(false)
+    const[accident, setAccident]=useState(false)
+    const[one, setOne]=useState(false)
+    const[two, setTwo]=useState(false)
+    const[three, setThree]=useState(false)
 
     const [flushed, setFlushed]= useState(false)
     const [washedHands, setWashedHands] =useState(false)
@@ -18,6 +29,15 @@ function CreateNewPottyEvent(){
 
     const params = useParams()
     
+    // const [formData, setFormData] =useState({
+    //     whatHappened: '',
+
+    // })
+
+    // setFormData({
+    //     ...formData,
+    //     [e.target.name]: [e.target.value]
+    // })
 
     let madeItFollowUpObj = {
         flushed:flushed, 
@@ -32,11 +52,25 @@ function CreateNewPottyEvent(){
     }
 
     whatHappened === "Made It" ? accidentFollowUpObj = null : madeItFollowUpObj = null; 
-
-    function handleRadioClick(e){
-    setWhatHappened(e.target.value)
+    function handleMadeIt(e){
+        setMadeIt(!madeIt);
+        setWhatHappened(e.target.value)
     }
-    function handleRadio1Click(e){
+    function handleAccident(e){
+        setAccident(!accident);
+        setWhatHappened(e.target.value)
+    }
+
+    function handleOne(e){
+        setOne(!one);
+        setWhatCameOut(e.target.value)
+    }
+    function handleTwo(e){
+        setTwo(!two);
+        setWhatCameOut(e.target.value)
+    }
+    function handleThree(e){
+        setThree(!three);
         setWhatCameOut(e.target.value)
     }
 
@@ -60,10 +94,14 @@ function CreateNewPottyEvent(){
     }
     let postedObj={};
 
-    let date = format ( new Date(), 'do MMMM Y h:mm a')
+    let date = format ( new Date(), 'd MMMM Y')
+    let time = format ( new Date(), 'h:mm a')
+
+    
     function handleSubmit(e){
         accidentFollowUpObj === null ?(postedObj = {
             date:date,
+            time:time,
             kidId: parseInt(params.id),
             eventType: whatHappened,
             pottyType: whatCameOut,
@@ -73,13 +111,13 @@ function CreateNewPottyEvent(){
         },
             notes:notes
         }):(postedObj={
-            date:"",
+            date:date,
             kidId: parseInt(params.id),
             eventType: whatHappened,
             pottyType: whatCameOut,
             followUp:{
                 madeIt: null,
-                accident:[accidentFollowUpObj.accident, accidentFollowUpObj.notifiedProviderAccident]
+                accident:[accidentFollowUpObj.almostMadeIt, accidentFollowUpObj.notifiedProviderAccident]
         },
             notes:notes
         })
@@ -96,50 +134,63 @@ function CreateNewPottyEvent(){
      })
      .then(response=>response.json())
      .then(data=>console.log(data))
+     .then(reset())
+}
+
+function reset(){
+    setMadeIt(false);
+    setAccident(false);
+    setOne(false);
+    setTwo(false);
+    setThree(false);
+    setFlushed(false);
+    setWashedHands(false);
+    setNotifiedProvider(false);
+    setAlmostMadeIt(false);
+    setNotifiedProviderAccident(false);
+    setNotes("");
 }
     return(
-        <div>
-            <h1>New Event</h1>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <h2>What Happened?</h2>
-                    <input type ="radio" id="madeIt" name="radio" value="Made It" onChange={handleRadioClick}></input>
-                    <label htmlFor="madeIt">Made It</label>
-                    <input type ="radio" id="accident" name="radio" value="Accident" onChange={handleRadioClick}></input>
-                    <label htmlFor="accident">Accident</label>
-                </div>
-                <div >
-                    <h2>What Came Out?</h2>
-                    <input type ="radio" id="#1" name="radio1" value="# 1" onChange={handleRadio1Click}></input>
-                    <label htmlFor="#1">#1</label>
-                    <input type ="radio" id="#2" name="radio1" value="# 2" onChange={handleRadio1Click}></input>
-                    <label htmlFor="#2">#2</label>
-                    <input type ="radio" id="#12" name="radio1" value="# 1 & 2" onChange={handleRadio1Click}></input>
-                    <label htmlFor="##12">#1&2</label>
-                </div>
+        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
+            <Form onSubmit={handleSubmit} style={{width:'30rem', justifyContent:'center', alignItems:'center', textAlign:'center', height: 'rem', color:'black', backgroundColor:'rgba(119, 145, 126, 0.5'}}>
+             <h1>New Event</h1>
+                <Form.Group>
+                    <Form.Label style={{fontSize:'20px'}} class="font-weight-bold">What Happened?</Form.Label>
+                    <br />  
+                    <Form.Check checked={madeIt} type="radio" inline label="Made It!" name="madeIt" id="madeIt" value="Made It" onChange={((e)=>handleMadeIt(e))}/>
+                    <Form.Check checked={accident} type="radio" inline label="Accident." name="group1" id="accident" value="Accident" onChange={((e)=>handleAccident(e))}/>
+                </Form.Group>
+                <br />
+                <Form.Group >
+                    <Form.Label style={{fontSize:'20px'}}>What Came Out?</Form.Label >
+                    <br />
+                    <Form.Check checked={one} type="radio" inline label="#1" name="group2" id="#1" value="#1" onChange={handleOne}/>
+                    <Form.Check checked={two} type="radio" inline label="#2" name="group2" id="#2" value="# 2" onChange={handleTwo}/>
+                    <Form.Check checked={three} type="radio" inline label="#1 & 2" name="group2" id="#12" value="# 1 & 2" onChange={handleThree}/>
+                </Form.Group>
+                <br />
                 {whatHappened === "Made It" ? (
-                <div id ="madeItFollowUp">
-                    <h2>Made It Follow Up</h2>
-                    <input type ="checkbox" id="flushed" value={flushed} onChange={handleFlushed}></input>
-                    <label htmlFor ="flushed">Flushed</label>
-                    <input type ="checkbox" id="washedHands" value={washedHands} onChange={handleWashed}></input>
-                    <label htmlFor ="washedHands">Washed Hands</label>
-                    <input type ="checkbox" id="notifiedProvider" value={notifiedProvider} onChange={handleNotified}></input>
-                    <label htmlFor ="notifiedProvider">Notified Provider</label>
-                </div>): (<div id ="accidentFollowUp">
-                    <h2>Accident Follow Up</h2>
-                    <input type ="checkbox" id="almostMadeIt" value={almostMadeIt} onChange={handleAlmost}></input>
-                    <label htmlFor ="almostMadeIt">Almost Made It</label>
-                    <input type ="checkbox" id="notifiedProvider" value={notifiedProviderAccident} onChange={handleNotifiedAccident}></input>
-                    <label htmlFor ="notifiedProvider">Notified Provider</label>
-                </div>)}
-
-                <div>
-                    <h2>Notes:</h2>
-                    <input type ="text" value ={notes} onChange={((e)=>setNotes(e.target.value))}></input>
-                    <button type = "submit">Add Event</button>
-                </div>
-            </form>
+                <Form.Group id ="madeItFollowUp">
+                    <Form.Label style={{fontSize:'20px'}}>Made It Follow Up</Form.Label>
+                    <br />
+                    <Form.Check checked={flushed} type="checkbox" inline label="Flushed" name="group3" id="flushed" value={flushed} onChange={handleFlushed}/>
+                    <Form.Check checked={washedHands} type="checkbox" inline label="Washed Hands" name="group3" id="washedHands" value={washedHands} onChange={handleWashed}/>
+                    <Form.Check checked={notifiedProvider} type="checkbox" inline label="Notified Provider" name="group3" id="notifiedProvider" value={notifiedProvider} onChange={handleNotified}/>
+                </Form.Group>): (<Form.Group id ="accidentFollowUp">
+                    <Form.Label style={{fontSize:'20px'}}>Accident Follow Up</Form.Label>
+                    <br/>
+                    <Form.Check checked={almostMadeIt} type="checkbox" inline label="Almost Made It" name="group3" id="almostMadeIt" value={almostMadeIt} onChange={handleAlmost}/>
+                    <Form.Check checked={notifiedProviderAccident} type="checkbox" inline label="Notified Provider" name="group3" id="notifiedProviderAccident" value={notifiedProviderAccident} onChange={handleNotifiedAccident}/>
+                </Form.Group>)}
+                <br/>
+                <Form.Group>
+                    <FloatingLabel controlId="floatingTextarea" label="Notes">
+                        <Form.Control as="textarea" placeholder="Add Your Notes Here" style={{height:'100px'}} value ={notes} onChange={((e)=>setNotes(e.target.value))}/>
+                    </FloatingLabel>
+                    {/* <input type ="text" value ={notes} onChange={((e)=>setNotes(e.target.value))}></input> */}
+                    <Button type = "submit" style={{backgroundColor:'#FFEB33', borderColor:'green', color:'gray'}}>Add Event</Button>
+                </Form.Group>
+            </Form>
         </div>
     )
 }

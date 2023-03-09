@@ -1,4 +1,48 @@
 {
+  "users": [
+    {
+      "kidId": 1,
+      "name": "Jackie",
+      "email": "krieger.jacqueline@gmail.com",
+      "password": "123asd",
+      "id": 1
+    },
+    {
+      "kidId": 2,
+      "name": "Juan",
+      "email": "blackfusion111@gmail.com",
+      "password": "123",
+      "id": 2
+    }, 
+    {
+      "kidId": 3,
+      "name": "Jack",
+      "email": "hilldestroyer@felldown.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "kidId": 4,
+      "name": "Sally",
+      "email": "seashores@bunsnsun.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "kidId": 5,
+      "name": "Peter Piper",
+      "email": "pickeledpeppers@twister.com",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "kidId": 6,
+      "name": "Jill",
+      "email": "jackmademedoit@blamegame.com",
+      "password": "123",
+      "id": 6
+    }
+  ],
   "kids": [
     {
       "id": 1,
@@ -8,31 +52,31 @@
     },
     {
       "id": 2,
-      "name": "Jane",
+      "name": "Bombury",
       "image": "https://cdn-icons-png.flaticon.com/512/421/421140.png?w=1380&t=st=1677958578~exp=1677959178~hmac=d7cb047dcc1ce22e6faef033603d71e3c63464421b2c53110b760f2b61caa557",
       "dateTrainingBegan": "5 March, 2023"
-    }, 
+    },
     {
       "id": 3,
-      "name": "Jannie",
+      "name": "NataliaLaFourcade",
       "image": "https://cdn-icons-png.flaticon.com/512/421/421140.png?w=1380&t=st=1677958578~exp=1677959178~hmac=d7cb047dcc1ce22e6faef033603d71e3c63464421b2c53110b760f2b61caa557",
       "dateTrainingBegan": "5 March, 2023"
     },
     {
       "id": 4,
-      "name": "John",
+      "name": "MonLafarte",
       "image": "https://cdn-icons-png.flaticon.com/512/421/421139.png?w=1380&t=st=1677958493~exp=1677959093~hmac=6bad3b079932819fc11c24168769170df7ce96628846265d838ff6f25df55ca4",
       "dateTrainingBegan": "3 March, 2023"
     },
     {
       "id": 5,
-      "name": "Robert",
+      "name": "LearningtoSpellisaStruggle",
       "image": "https://cdn-icons-png.flaticon.com/512/421/421139.png?w=1380&t=st=1677958493~exp=1677959093~hmac=6bad3b079932819fc11c24168769170df7ce96628846265d838ff6f25df55ca4",
       "dateTrainingBegan": "3 March, 2023"
     },
     {
       "id": 6,
-      "name": "Valaria",
+      "name": "Peter Rabbit",
       "image": "https://cdn-icons-png.flaticon.com/512/421/421140.png?w=1380&t=st=1677958578~exp=1677959178~hmac=d7cb047dcc1ce22e6faef033603d71e3c63464421b2c53110b760f2b61caa557",
       "dateTrainingBegan": "5 March, 2023"
     }
@@ -40,7 +84,7 @@
   "events": [
     {
       "id": 1,
-      "date": "3 March, 2023",
+      "date": "3 March 2023 8:30 AM",
       "kidId": 2,
       "eventType": "Accident.",
       "pottyType": "#1",
@@ -55,7 +99,7 @@
     },
     {
       "id": 2,
-      "date": "3 March, 2023",
+      "date": "3 March 2023 9:15 AM",
       "kidId": 2,
       "eventType": "Accident.",
       "pottyType": "#2",
@@ -70,7 +114,7 @@
     },
     {
       "id": 3,
-      "date": "3 March, 2023",
+      "date": "3 March 2023 10:20 AM",
       "kidId": 2,
       "eventType": "Accident.",
       "pottyType": "#1",
@@ -85,7 +129,7 @@
     },
     {
       "id": 4,
-      "date": "4 March, 2023",
+      "date": "4 March 2023 12:05 PM",
       "kidId": 2,
       "eventType": "Made it!",
       "pottyType": "#1",
@@ -100,7 +144,8 @@
     },
     {
       "id": 5,
-      "date": "3 March, 2023",
+      "date": "3 March 2023 ",
+      "time": "11:05 AM",
       "kidId": 1,
       "eventType": "Made It!",
       "pottyType": "#1",
@@ -115,7 +160,8 @@
     },
     {
       "id": 6,
-      "date": "3 March, 2023",
+      "date": "3 March 2023",
+      "time": "12:52 PM",
       "kidId": 1,
       "eventType": "Accident.",
       "pottyType": "#1",
@@ -129,7 +175,8 @@
     },
     {
       "id": 7,
-      "date": "3 March, 2023",
+      "date": "3 March 2023",
+      "time": "3:30 PM",
       "kidId": 1,
       "eventType": "Made it!",
       "pottyType": "#3",
@@ -143,9 +190,10 @@
       "notes": "Dry after nap, I think we are getting it!"
     },
     {
-      "date": "7th March 2023 4:32 PM",
+      "date": "7 March 2023",
+      "time": "4:32 PM",
       "kidId": 1,
-      "eventType": "Made It",
+      "eventType": "Made It!",
       "pottyType": "# 2",
       "followUp": {
         "madeIt": [
@@ -156,6 +204,107 @@
       },
       "notes": "You got this girl!",
       "id": 8
+    },
+    {
+      "date": "8 March 2023",
+      "time": "12:20 PM",
+      "kidId": 3,
+      "eventType": "Made It!",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": [
+          false,
+          true,
+          false
+        ],
+        "accident": null
+      },
+      "notes": "Making Databases",
+      "id": 9
+    },
+    {
+      "date": "6 March 2023",
+      "time": "12:49 PM",
+      "kidId": 3,
+      "eventType": "Accident",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": null,
+        "accident": [
+          true,
+          false
+        ]
+      },
+      "notes": "No worries, we got this!",
+      "id": 10
+    },
+    {
+      "date": "7 March 2023",
+      "time": "12:49 PM",
+      "kidId": 3,
+      "eventType": "Made It!",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": [
+          false,
+          true,
+          false
+        ],
+        "accident": null
+      },
+      "notes": "testing",
+      "id": 11
+    },
+    {
+      "date": "8 March 2023",
+      "time": "2:36 PM",
+      "kidId": 6,
+      "eventType": "Made It!",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": [
+          false,
+          true,
+          false
+        ],
+        "accident": null
+      },
+      "notes": "Date Night!",
+      "id": 25
+    },
+    {
+      "date": "8 March 2023",
+      "time": "2:39 PM",
+      "kidId": 6,
+      "eventType": "Made It!",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": [
+          false,
+          true,
+          false
+        ],
+        "accident": null
+      },
+      "notes": "time format 2:39",
+      "id": 26
+    },
+    {
+      "date": "8 March 2023",
+      "time": "9:00 PM",
+      "kidId": 2,
+      "eventType": "Made It",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": [
+          false,
+          true,
+          true
+        ],
+        "accident": null
+      },
+      "notes": "Good job",
+      "id": 27
     }
   ]
 }

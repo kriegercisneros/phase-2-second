@@ -4,9 +4,12 @@ import PottyEventCard from "./PottyEventCard"
 // import CardGroup from "react-bootstrap/CardGroup"
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+
 
 function PottyPals({}){
     const [events, setEvents] = useState([])
+    const [name, setName] = useState("")
     const params =useParams()
 
     useEffect(()=>{
@@ -14,14 +17,26 @@ function PottyPals({}){
         .then(response=>response.json())
         .then(data=>setEvents(data.events))
     }, [params])
+
+    useEffect(()=>{
+        fetch(`http://localhost:3000/users/${params.id}`)
+        .then(response=>response.json())
+        .then(data=>setName(data.name))
+    },[])
+
+    let dateSort = events.sort(function(a, b){
+        const dateA= new Date(a.date)
+        const dateB= new Date(b.date)
+        if(dateA>dateB) return 1;
+        else if(dateA<dateB) return -1;
+        else return 0;
+    })
+
     return (
-        <Row xs={1} md={2} lg={4} className="g-4">
-            {events.map((event)=>{
-                return <Col>
-                    <PottyEventCard event={event}/>
-                </Col>
-            })}
-        </Row>
+        <div style={{display:'flex', justifyContent:'center', flexDirection:'column', alignItems: 'center'}}>
+            <h1>Hello, {name}</h1>
+            {dateSort.map((event)=>(<PottyEventCard event={event}/>))}
+        </div>
     )
 }
 
