@@ -6,8 +6,31 @@ import { format } from 'date-fns'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import { useForm } from 'react-hook-form'
 
 function CreateNewPottyEvent(){
+
+    // const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    // const onSubmit = data =>console.log(data); 
+    // console.log(watch("exampleRequired")) //watch input value by passing in the name of it
+
+    // return(
+    //     //handleSubmit will validate your inputs before invoking "onSubmit"
+    //     <form onSubmit={handleSubmit(onSubmit)}>
+    //         {/*register input into hook by invoking the register function */}
+    //         <input defaultValue="test" {...register("example")} />
+
+    //         {/*include validation with required or other standard HTML validation rules  */}
+    //         <input {...register("exampleRequired", { required: true })}/>
+    //         {/*errors will return when field validation fails */}
+    //         {errors.exampleRequired && <span>This field is required.</span>}
+
+    //         <input type="submit"></input>
+    //     </form>
+    // )
+
+
+
     const [whatHappened, setWhatHappened]= useState("")
 
     const [whatCameOut, setWhatCameOut]= useState("")
@@ -193,5 +216,6 @@ function reset(){
             </Form>
         </div>
     )
+
 }
 export default CreateNewPottyEvent
