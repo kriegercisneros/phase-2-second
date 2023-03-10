@@ -152,43 +152,43 @@ function reset(){
 }
     return(
         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
-            <Form onSubmit={handleSubmit} style={{width:'30rem', justifyContent:'center', alignItems:'center', textAlign:'center', height: 'rem', color:'black', backgroundColor:'rgba(119, 145, 126, 0.5'}}>
-             <h1>New Event</h1>
+            <Form onSubmit={handleSubmit} style={{width:'30rem', justifyContent:'center', alignItems:'center', textAlign:'center', height: 'rem', color:'black', backgroundColor:'rgba(119, 145, 126, 0.5', borderRadius:'5%', padding:'2vh'}}>
+             <h1 style={{fontSize:'5vh', color:'rgb(114, 117, 114)', backgroundColor:'rgb(188, 209, 188)', borderRadius:'50%', height:'10vh', paddingTop:'1.7vh'}}>New Event</h1>
                 <Form.Group>
-                    <Form.Label style={{fontSize:'20px'}} class="font-weight-bold">What Happened?</Form.Label>
+                    <Form.Label style={{fontSize:'3vh'}}>What Happened?</Form.Label>
                     <br />  
-                    <Form.Check checked={madeIt} type="radio" inline label="Made It!" name="madeIt" id="madeIt" value="Made It" onChange={((e)=>handleMadeIt(e))}/>
-                    <Form.Check checked={accident} type="radio" inline label="Accident." name="group1" id="accident" value="Accident" onChange={((e)=>handleAccident(e))}/>
+                    <Form.Check style={{fontSize:'2vh'}} checked={madeIt} type="radio" inline label="Made It!" name="madeIt" id="madeIt" value="Made It" onChange={((e)=>handleMadeIt(e))}/>
+                    <Form.Check style={{fontSize:'2vh'}} checked={accident} type="radio" inline label="Accident." name="group1" id="accident" value="Accident" onChange={((e)=>handleAccident(e))}/>
                 </Form.Group>
                 <br />
                 <Form.Group >
-                    <Form.Label style={{fontSize:'20px'}}>What Came Out?</Form.Label >
+                    <Form.Label style={{fontSize:'3vh'}}>What Came Out?</Form.Label >
                     <br />
-                    <Form.Check checked={one} type="radio" inline label="#1" name="group2" id="#1" value="#1" onChange={handleOne}/>
-                    <Form.Check checked={two} type="radio" inline label="#2" name="group2" id="#2" value="# 2" onChange={handleTwo}/>
-                    <Form.Check checked={three} type="radio" inline label="#1 & 2" name="group2" id="#12" value="# 1 & 2" onChange={handleThree}/>
+                    <Form.Check style={{fontSize:'2vh'}} checked={one} type="radio" inline label="#1" name="group2" id="#1" value="#1" onChange={handleOne}/>
+                    <Form.Check style={{fontSize:'2vh'}} checked={two} type="radio" inline label="#2" name="group2" id="#2" value="# 2" onChange={handleTwo}/>
+                    <Form.Check style={{fontSize:'2vh'}} checked={three} type="radio" inline label="#1 & 2" name="group2" id="#12" value="# 1 & 2" onChange={handleThree}/>
                 </Form.Group>
                 <br />
                 {whatHappened === "Made It" ? (
                 <Form.Group id ="madeItFollowUp">
-                    <Form.Label style={{fontSize:'20px'}}>Made It Follow Up</Form.Label>
+                    <Form.Label style={{fontSize:'3vh'}}>Made It Follow Up</Form.Label>
                     <br />
-                    <Form.Check checked={flushed} type="checkbox" inline label="Flushed" name="group3" id="flushed" value={flushed} onChange={handleFlushed}/>
-                    <Form.Check checked={washedHands} type="checkbox" inline label="Washed Hands" name="group3" id="washedHands" value={washedHands} onChange={handleWashed}/>
-                    <Form.Check checked={notifiedProvider} type="checkbox" inline label="Notified Provider" name="group3" id="notifiedProvider" value={notifiedProvider} onChange={handleNotified}/>
+                    <Form.Check style={{fontSize:'2vh'}} checked={flushed} type="checkbox" inline label="Flushed" name="group3" id="flushed" value={flushed} onChange={handleFlushed}/>
+                    <Form.Check style={{fontSize:'2vh'}} checked={washedHands} type="checkbox" inline label="Washed Hands" name="group3" id="washedHands" value={washedHands} onChange={handleWashed}/>
+                    <Form.Check style={{fontSize:'2vh'}} checked={notifiedProvider} type="checkbox" inline label="Notified Provider" name="group3" id="notifiedProvider" value={notifiedProvider} onChange={handleNotified}/>
                 </Form.Group>): (<Form.Group id ="accidentFollowUp">
-                    <Form.Label style={{fontSize:'20px'}}>Accident Follow Up</Form.Label>
+                    <Form.Label style={{fontSize:'3vh'}}>Accident Follow Up</Form.Label>
                     <br/>
-                    <Form.Check checked={almostMadeIt} type="checkbox" inline label="Almost Made It" name="group3" id="almostMadeIt" value={almostMadeIt} onChange={handleAlmost}/>
-                    <Form.Check checked={notifiedProviderAccident} type="checkbox" inline label="Notified Provider" name="group3" id="notifiedProviderAccident" value={notifiedProviderAccident} onChange={handleNotifiedAccident}/>
+                    <Form.Check style={{fontSize:'2vh'}} checked={almostMadeIt} type="checkbox" inline label="Almost Made It" name="group3" id="almostMadeIt" value={almostMadeIt} onChange={handleAlmost}/>
+                    <Form.Check style={{fontSize:'2vh'}} checked={notifiedProviderAccident} type="checkbox" inline label="Notified Provider" name="group3" id="notifiedProviderAccident" value={notifiedProviderAccident} onChange={handleNotifiedAccident}/>
                 </Form.Group>)}
                 <br/>
                 <Form.Group>
                     <FloatingLabel controlId="floatingTextarea" label="Notes">
                         <Form.Control as="textarea" placeholder="Add Your Notes Here" style={{height:'100px'}} value ={notes} onChange={((e)=>setNotes(e.target.value))}/>
-                    </FloatingLabel>
+                    </FloatingLabel><br/>
                     {/* <input type ="text" value ={notes} onChange={((e)=>setNotes(e.target.value))}></input> */}
-                    <Button type = "submit" style={{backgroundColor:'#FFEB33', borderColor:'green', color:'gray'}}>Add Event</Button>
+                    <Button type = "submit" style={{backgroundColor:'#FFEB33', borderColor:'green', color:'rgb(114, 117, 114)', height:'8vh', width:'15vh'}}>Add Event</Button>
                 </Form.Group>
             </Form>
         </div>

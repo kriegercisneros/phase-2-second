@@ -9,7 +9,7 @@ import LoginPage from './LoginPage'
 
 function App() {
     return(
-        <div style={{backgroundImage:`url(${backImage})`, backgroundSize:'cover', webkitBackgroundSize:'cover', width:'100vw', height:'100vh', fontFamily:'Gloria Hallelujah', backgroundRepeat:'repeat'}}>
+        <div style={{backgroundImage:`url(${backImage})`, backgroundSize:'cover', WebkitBackgroundSize:'cover', width:'100vw', height:'100vh', fontFamily:'Gloria Hallelujah', backgroundRepeat:'repeat'}}>
         <Switch>
             <Route path="/home">
                 <HomePage />
