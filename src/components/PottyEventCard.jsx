@@ -8,7 +8,8 @@ function PottyEventCard({event, index}){
       <Accordion.Item eventKey={index}>
         <Accordion.Header>{event.date}, {event.eventType}</Accordion.Header>
         <Accordion.Body >
-        <Card border="warning">      
+        <Card border="warning">
+                <h3 style={{textAlign:'center', color:'white', backgroundColor:'rgb(121, 135, 153)'}}>{event.time}</h3>      
                 {event.followUp.madeIt ? (<Card.Img style={{width:'22rem'}}variant="top" src="https://previews.123rf.com/images/briang77/briang771512/briang77151200985/49668817-fireworks-vector-icon.jpg"/>):
                 (<Card.Img style={{width:'22rem'}} variant="top" src="https://static.vecteezy.com/system/resources/previews/016/627/402/non_2x/next-time-buttons-sign-label-speech-bubble-next-time-vector.jpg"/>)}
             <Card.Body>
