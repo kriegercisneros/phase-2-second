@@ -2,14 +2,12 @@ import React from "react"
 import Card from 'react-bootstrap/Card'
 import Accordion from 'react-bootstrap/Accordion';
 
-function PottyEventCard({event}){
+function PottyEventCard({event, index}){
     return(
     <div>
-
-<Accordion defaultActiveKey={['0']} alwaysOpen style={{width:'25rem'}}>
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>{event.date}</Accordion.Header>
-        <Accordion.Body style={{float:'center'}}>
+      <Accordion.Item eventKey={index}>
+        <Accordion.Header>{event.date}, {event.eventType}</Accordion.Header>
+        <Accordion.Body >
         <Card border="warning">      
                 {event.followUp.madeIt ? (<Card.Img style={{width:'22rem'}}variant="top" src="https://img.freepik.com/premium-vector/colorful-fireworks-festival-sky-light-holiday-party-sparks_543062-2129.jpg"/>):
                 (<Card.Img style={{width:'21rem'}} variant="top" src="https://static.vecteezy.com/system/resources/previews/016/627/402/non_2x/next-time-buttons-sign-label-speech-bubble-next-time-vector.jpg"/>)}
@@ -41,7 +39,7 @@ function PottyEventCard({event}){
         </Card>
         </Accordion.Body>
       </Accordion.Item>
-    </Accordion>
+
         {/* <Card border="warning">
             <Card.Header>{event.date}</Card.Header>         
                 {event.followUp.madeIt ? (<Card.Img style={{width:'25rem'}}variant="top" src="https://img.freepik.com/premium-vector/colorful-fireworks-festival-sky-light-holiday-party-sparks_543062-2129.jpg"/>):

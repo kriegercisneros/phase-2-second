@@ -1,0 +1,12 @@
+.container5{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 2vh;
+    justify-content: left
+  }
+
+  #cardtext{
+    font-size: 2.75vw;
+  }
+  

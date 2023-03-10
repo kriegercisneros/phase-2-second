@@ -13,7 +13,7 @@
       "email": "blackfusion111@gmail.com",
       "password": "123",
       "id": 2
-    }, 
+    },
     {
       "kidId": 3,
       "name": "Jack",
@@ -52,33 +52,21 @@
     },
     {
       "id": 2,
-      "name": "Bombury",
+      "name": "Bunbury",
       "image": "https://cdn-icons-png.flaticon.com/512/421/421140.png?w=1380&t=st=1677958578~exp=1677959178~hmac=d7cb047dcc1ce22e6faef033603d71e3c63464421b2c53110b760f2b61caa557",
       "dateTrainingBegan": "5 March, 2023"
     },
     {
       "id": 3,
-      "name": "NataliaLaFourcade",
+      "name": "Natalia LaFourcade",
       "image": "https://cdn-icons-png.flaticon.com/512/421/421140.png?w=1380&t=st=1677958578~exp=1677959178~hmac=d7cb047dcc1ce22e6faef033603d71e3c63464421b2c53110b760f2b61caa557",
       "dateTrainingBegan": "5 March, 2023"
     },
     {
       "id": 4,
-      "name": "MonLafarte",
+      "name": "Mon Lafarte",
       "image": "https://cdn-icons-png.flaticon.com/512/421/421139.png?w=1380&t=st=1677958493~exp=1677959093~hmac=6bad3b079932819fc11c24168769170df7ce96628846265d838ff6f25df55ca4",
       "dateTrainingBegan": "3 March, 2023"
-    },
-    {
-      "id": 5,
-      "name": "LearningtoSpellisaStruggle",
-      "image": "https://cdn-icons-png.flaticon.com/512/421/421139.png?w=1380&t=st=1677958493~exp=1677959093~hmac=6bad3b079932819fc11c24168769170df7ce96628846265d838ff6f25df55ca4",
-      "dateTrainingBegan": "3 March, 2023"
-    },
-    {
-      "id": 6,
-      "name": "Peter Rabbit",
-      "image": "https://cdn-icons-png.flaticon.com/512/421/421140.png?w=1380&t=st=1677958578~exp=1677959178~hmac=d7cb047dcc1ce22e6faef033603d71e3c63464421b2c53110b760f2b61caa557",
-      "dateTrainingBegan": "5 March, 2023"
     }
   ],
   "events": [
@@ -305,6 +293,38 @@
       },
       "notes": "Good job",
       "id": 27
+    },
+    {
+      "date": "9 March 2023",
+      "kidId": 2,
+      "eventType": "Accident",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": null,
+        "accident": [
+          true,
+          false
+        ]
+      },
+      "notes": "Need a new change of clothes please.",
+      "id": 28
+    },
+    {
+      "date": "9 March 2023",
+      "time": "5:08 PM",
+      "kidId": 4,
+      "eventType": "Made It",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": [
+          false,
+          true,
+          true
+        ],
+        "accident": null
+      },
+      "notes": "Yay!",
+      "id": 29
     }
   ]
 }
