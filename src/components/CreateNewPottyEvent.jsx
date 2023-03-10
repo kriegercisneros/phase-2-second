@@ -1,8 +1,7 @@
 import React, { useState} from "react"
 import {useParams, useHistory} from "react-router-dom"
 import { format } from 'date-fns'
-// import Card from 'react-bootstrap/Card';
-// import ListGroup from 'react-bootstrap/ListGroup';
+
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
@@ -12,35 +11,19 @@ function CreateNewPottyEvent(){
 let history = useHistory()
 
     const [whatHappened, setWhatHappened]= useState("")
-
     const [whatCameOut, setWhatCameOut]= useState("")
-
     const[madeIt, setMadeIt]=useState(false)
     const[accident, setAccident]=useState(false)
     const[one, setOne]=useState(false)
     const[two, setTwo]=useState(false)
     const[three, setThree]=useState(false)
-
     const [flushed, setFlushed]= useState(false)
     const [washedHands, setWashedHands] =useState(false)
     const [notifiedProvider, setNotifiedProvider] = useState(false)
-
     const [almostMadeIt, setAlmostMadeIt] = useState(false)
     const [notifiedProviderAccident, setNotifiedProviderAccident] = useState(false)
-
     const [notes, setNotes]= useState("")
-
     const params = useParams()
-    
-    // const [formData, setFormData] =useState({
-    //     whatHappened: '',
-
-    // })
-
-    // setFormData({
-    //     ...formData,
-    //     [e.target.name]: [e.target.value]
-    // })
 
     let madeItFollowUpObj = {
         flushed:flushed, 
