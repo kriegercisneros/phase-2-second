@@ -537,6 +537,151 @@
       },
       "notes": "Nice work!",
       "id": 41
+    },
+    {
+      "date": "10 March 2023",
+      "time": "10:49 AM",
+      "kidId": 5,
+      "eventType": "Made It",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": [
+          false,
+          true,
+          false
+        ],
+        "accident": null
+      },
+      "notes": "232",
+      "id": 42
+    },
+    {
+      "date": "10 March 2023",
+      "kidId": 5,
+      "eventType": "Accident",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": null,
+        "accident": [
+          false,
+          true
+        ]
+      },
+      "notes": "2323",
+      "id": 43
+    },
+    {
+      "date": "10 March 2023",
+      "time": "10:49 AM",
+      "kidId": 5,
+      "eventType": "Made It",
+      "pottyType": "# 1 & 2",
+      "followUp": {
+        "madeIt": [
+          false,
+          false,
+          true
+        ],
+        "accident": null
+      },
+      "notes": "",
+      "id": 44
+    },
+    {
+      "date": "10 March 2023",
+      "time": "10:49 AM",
+      "kidId": 5,
+      "eventType": "Made It",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": [
+          false,
+          true,
+          false
+        ],
+        "accident": null
+      },
+      "notes": "",
+      "id": 45
+    },
+    {
+      "date": "10 March 2023",
+      "kidId": 5,
+      "eventType": "Accident",
+      "pottyType": "# 2",
+      "followUp": {
+        "madeIt": null,
+        "accident": [
+          false,
+          false
+        ]
+      },
+      "notes": "so tired this kid",
+      "id": 46
+    },
+    {
+      "date": "10 March 2023",
+      "time": "10:50 AM",
+      "kidId": 4,
+      "eventType": "Made It",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": [
+          false,
+          true,
+          false
+        ],
+        "accident": null
+      },
+      "notes": "so easy to add an event",
+      "id": 47
+    },
+    {
+      "date": "10 March 2023",
+      "kidId": 4,
+      "eventType": "Accident",
+      "pottyType": "# 2",
+      "followUp": {
+        "madeIt": null,
+        "accident": [
+          true,
+          true
+        ]
+      },
+      "notes": "really really easy",
+      "id": 48
+    },
+    {
+      "date": "10 March 2023",
+      "time": "10:51 AM",
+      "kidId": 4,
+      "eventType": "Made It",
+      "pottyType": "#1",
+      "followUp": {
+        "madeIt": [
+          false,
+          true,
+          false
+        ],
+        "accident": null
+      },
+      "notes": "really want that white space at the bottom to go away",
+      "id": 49
+    },
+    {
+      "date": "10 March 2023",
+      "kidId": 4,
+      "eventType": "Accident",
+      "pottyType": "# 1 & 2",
+      "followUp": {
+        "madeIt": null,
+        "accident": [
+          true,
+          true
+        ]
+      },
+      "notes": "also i would like to put in error handling here",
+      "id": 50
     }
   ]
 }
