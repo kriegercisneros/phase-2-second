@@ -67,6 +67,18 @@
       "name": "Mon Lafarte",
       "image": "https://cdn-icons-png.flaticon.com/512/421/421139.png?w=1380&t=st=1677958493~exp=1677959093~hmac=6bad3b079932819fc11c24168769170df7ce96628846265d838ff6f25df55ca4",
       "dateTrainingBegan": "3 March, 2023"
+    },
+    {
+      "id": 5,
+      "name": "Miguelito",
+      "image": "https://cdn-icons-png.flaticon.com/512/421/421139.png?w=1380&t=st=1677958493~exp=1677959093~hmac=6bad3b079932819fc11c24168769170df7ce96628846265d838ff6f25df55ca4",
+      "dateTrainingBegan": "3 March, 2023"
+    },
+    {
+      "id": 6,
+      "name": "Robert",
+      "image": "https://cdn-icons-png.flaticon.com/512/421/421139.png?w=1380&t=st=1677958493~exp=1677959093~hmac=6bad3b079932819fc11c24168769170df7ce96628846265d838ff6f25df55ca4",
+      "dateTrainingBegan": "3 March, 2023"
     }
   ],
   "events": [
@@ -325,6 +337,40 @@
       },
       "notes": "Yay!",
       "id": 29
+    },
+    {
+      "date": "9 March 2023",
+      "time": "5:46 PM",
+      "kidId": 2,
+      "eventType": "Made It",
+      "pottyType": "# 2",
+      "followUp": {
+        "madeIt": [
+          false,
+          true,
+          true
+        ],
+        "accident": null
+      },
+      "notes": "Great!",
+      "id": 30
+    },
+    {
+      "date": "9 March 2023",
+      "time": "9:03 PM",
+      "kidId": 1,
+      "eventType": "Made It",
+      "pottyType": "# 2",
+      "followUp": {
+        "madeIt": [
+          false,
+          true,
+          false
+        ],
+        "accident": null
+      },
+      "notes": "Great!  Now let's get this background working",
+      "id": 31
     }
   ]
 }

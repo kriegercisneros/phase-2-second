@@ -37,9 +37,9 @@ let history = useHistory()
     
     return (
         <>
-        <header style={{padding:'1rem', width:'100vw'}}><button onClick={(()=>history.push('/login'))}>Logout</button></header>
-        <div style={{width:'100vw', display:'flex', justifyContent:'center', backgroundRepeat:'inherit'}}>
-        <div style={{width:'50rem', height:'auto', display:'flex', justifyContent:'center', flexDirection:'column', alignItems: 'center', color:'black', backgroundColor:'rgba(119, 145, 126, 0.5)', padding:'10rem', borderRadius:'50%' }}>
+        <div style={{backgroundImage:`url(https://w0.peakpx.com/wallpaper/1010/454/HD-wallpaper-grass-wicker-texture-grass-weave-texture-macro-green-background-grass-textures-green-grass-texture-grass-from-top-grass-background-green-grass.jpg)`, width:'100vw', display:'flex', justifyContent:'center', flexDirection:'column', alignItems:'center', backgroundRepeat:'repeat'}}>
+        <header style={{padding:'1rem', width:'100vw'}}><button onClick={(()=>history.push('/login'))}>Logout</button><button onClick={(()=>history.push('/home'))}>Return Home</button></header>
+        <div style={{width:'50rem', height:'auto', display:'flex', justifyContent:'center', flexDirection:'column', alignItems: 'center', color:'black', backgroundColor:'rgba(119, 135, 200, 0.5)', padding:'10rem', borderRadius:'50%' }}>
             <h1>Hello, {name}!</h1>
             <h2 style={{color:'white'}}>Here are your kiddo's potty happenings while at care. </h2>
             <Accordion style={{width:'25rem'}}>

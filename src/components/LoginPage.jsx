@@ -36,8 +36,8 @@ function LoginPage() {
     
   return (
     <div style={{display:'flex', alignItems: 'center', flexDirection: 'column', height:'100vh', width:'100vw', paddingTop:'20rem', color:'black', backgroundColor:'rgba(119, 145, 126, 0.5)'}}>
-    <h1>Welcome, parent!</h1>
-    <h2>Login in to track your kiddo's progress.</h2>
+    <h1>Welcome to the Potty Tracker!</h1>
+    <h2>Login in to track potty progress.</h2>
     <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>

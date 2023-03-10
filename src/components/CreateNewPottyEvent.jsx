@@ -1,5 +1,5 @@
-import React, { useState, } from "react"
-import {useParams} from "react-router-dom"
+import React, { useState} from "react"
+import {useParams, useHistory} from "react-router-dom"
 import { format } from 'date-fns'
 // import Card from 'react-bootstrap/Card';
 // import ListGroup from 'react-bootstrap/ListGroup';
@@ -8,6 +8,9 @@ import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 function CreateNewPottyEvent(){
+
+let history = useHistory()
+
     const [whatHappened, setWhatHappened]= useState("")
 
     const [whatCameOut, setWhatCameOut]= useState("")
@@ -135,6 +138,7 @@ function CreateNewPottyEvent(){
      .then(response=>response.json())
      .then(data=>console.log(data))
      .then(reset())
+     .then(history.push(`/${params.id}`))
 }
 
 function reset(){

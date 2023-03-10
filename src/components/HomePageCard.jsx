@@ -20,7 +20,7 @@ function HomePageCard({data, imageSrc, imageName}){
             <img src={imageSrc} style={{width:'10em', width:'8vw'}}></img>
             <h1 id="cardtext">{imageName}</h1>
         </button>
-            <button style={{borderRadius:'50%', borderColor:'green', backgroundColor:'rgb(233, 245, 234)', display:'flex'}} onClick={handleAddClick}>+</button>
+            <button style={{borderRadius:'50%', color:'black', borderColor:'green', backgroundColor:'rgb(233, 245, 234)', display:'flex'}} onClick={handleAddClick}>+</button>
         </div>
     )
 }
